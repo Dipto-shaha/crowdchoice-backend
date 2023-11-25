@@ -6,11 +6,12 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 const user = require('../src/routes/user/user')
+const survey = require('../src/routes/Survey/survey')
 setUpMiddleWare(app);
 
 
 app.use(user);
-
+app.use(survey);
 
 
 app.get("/health", (req, res) => {
