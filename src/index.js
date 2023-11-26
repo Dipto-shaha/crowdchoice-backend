@@ -7,12 +7,13 @@ const port = process.env.PORT || 5000;
 
 const user = require('../src/routes/user/user')
 const survey = require('../src/routes/Survey/survey')
+const payment =require('../src/routes/Payment/payment')
 setUpMiddleWare(app);
 
 
 app.use(user);
 app.use(survey);
-
+app.use(payment);
 
 app.get("/health", (req, res) => {
   res.send("Servey Server is running....");
