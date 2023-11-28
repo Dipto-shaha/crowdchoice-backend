@@ -14,13 +14,21 @@ const ServeySchema = new Schema({
         type:String ,
         required: true
     },
+    "Category":{
+        type:String,
+        required:true
+    },
     "email":{
         type:String ,
         required: true
     },
     "date": {
-        type: [Date],
+        type: Date,
         required: true,
+    },
+    "question":{
+        type:String,
+        required:true,
     },
     "like":{
         type:Number ,
