@@ -5,7 +5,7 @@ const userCreate = async(req,res) =>{
     console.log(userInfo);
     const query= {email:userInfo.email};
     const cursor = await user.findOne(query);
-    if(!cursor)
+    if(!cursor) 
     {
         const userInfoWithRole ={...userInfo, role:'user'};
         const result = await user.create(userInfoWithRole);
@@ -14,7 +14,7 @@ const userCreate = async(req,res) =>{
     else
     {
         console.log(cursor);
-        res.send(cursor);
+        res.send(cursor); 
     }
 }
 
