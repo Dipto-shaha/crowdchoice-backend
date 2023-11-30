@@ -6,10 +6,11 @@ const getUserRole= require('../../api/user/getUserRole')
 const savefeedback= require('../../api/user/userfeedback')
 const getuserfeedbak =require('../../api/user/getuserFeedback')
 const router = require('express').Router()
+const verifyToken= require('../../middleWares/verifyToken');
 
 
 router.post('/user',userCreate)
-router.get('/userList',getUserList)
+router.get('/userList',verifyToken,getUserList)
 router.post('/jwt',createAuth)
 router.patch('/updateRole',updateRole)
 router.get('/getUserRole',getUserRole)

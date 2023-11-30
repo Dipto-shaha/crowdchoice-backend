@@ -8,8 +8,7 @@ const setUpMiddleware = (app)=>{
 // middleware
 app.use(cors({
     origin: [
-        process.env.LOCAL_CLIENT,
-        process.env.CLIENT
+        'https://steady-cat-31c52a.netlify.app'
     ],
     credentials: true
 }));
